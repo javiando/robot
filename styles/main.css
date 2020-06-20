@@ -1,0 +1,145 @@
+/*GLOBALS*/
+html {
+  margin: auto;
+  display: block;
+  width: 600px;
+}
+body {
+  position: relative;
+}
+div {
+  border: 2px solid black;
+}
+
+.torso,
+.mouth,
+.righteye,
+.lefteye,
+.rightear,
+.leftear {
+  background: red;
+}
+
+.face,
+.rightarm,
+.leftarm,
+.rightleg,
+.leftleg {
+  background-color: yellowgreen;
+}
+/*head*/
+.face {
+  width: 175px;
+  height: 175px;
+  position: absolute;
+  left: 202.5px;
+}
+/*ojos*/
+.righteye,
+.lefteye {
+  width: 30px;
+  height: 30px;
+  top: 40px;
+  position: absolute;
+}
+.righteye {
+  left: 245px;
+}
+.lefteye {
+  right: 245px;
+}
+/*orejas*/
+.rightear,
+.leftear {
+  width: 20px;
+  height: 50px;
+  position: absolute;
+  top: 35px;
+}
+.rightear {
+  left: 179px;
+}
+.leftear {
+  right: 179px;
+}
+/*boca*/
+.mouth {
+  width: 100px;
+  height: 20px;
+  position: absolute;
+  top: 120px;
+  left: 242px;
+}
+/*torso*/
+.torso {
+  width: 350px;
+  height: 350px;
+  position: absolute;
+  top: 177px;
+  left: 117px;
+}
+/*brazos*/
+.leftarm,
+.rightarm {
+  width: 200px;
+  height: 50px;
+  position: absolute;
+  top: 230px;
+  transition: transform 2s ease-in-out;
+  animation-duration: 1s;
+  animation-fill-mode: both;
+  animation-iteration-count: infinite;
+}
+.rightarm {
+  animation-name: r-up;
+}
+
+.leftarm {
+  right: 0px;
+  animation-name: l-up;
+}
+
+/*piernas*/
+.leftleg,
+.rightleg {
+  width: 75px;
+  height: 300px;
+  top: 529px;
+  position: absolute;
+}
+.rightleg {
+  left: 160px;
+}
+.leftleg {
+  right: 160px;
+}
+
+/*animacion*/
+@keyframes r-up {
+   {
+    transform: rotate(o);
+  }
+  0% {
+    transform: rotate(0);
+  }
+  50% {
+    transform: rotate(45deg);
+  }
+  100% {
+    transform: rotate(0);
+  }
+}
+@keyframes l-up {
+   {
+    transform: rotate(o);
+  }
+  0% {
+    transform: rotate(0);
+  }
+  50% {
+    transform: rotate(-45deg);
+  }
+  100% {
+    transform: rotate(0);
+  }
+}
